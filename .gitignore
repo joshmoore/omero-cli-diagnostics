@@ -1,0 +1,4 @@
+build
+dist
+omero-cli-diagnostics-*
+src/omero_cli_diagnostics.egg-info

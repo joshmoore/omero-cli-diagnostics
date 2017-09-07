@@ -1,0 +1,9 @@
+=======
+Changes
+=======
+
+
+0.1 - Sep 7, 2017
+=================
+
+* Initial release. Based on https://github.com/dominikl/openmicroscopy/pull/9
