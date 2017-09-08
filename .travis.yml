@@ -13,6 +13,7 @@ before_install:
   - pip install omego
   - (cd /tmp ; omego download python --release 5.4.0-m3 --sym=auto)
   - git clone --depth 1 -b web_diagnostics https://github.com/joshmoore/openmicroscopy /tmp/ome
+  - pip install -r /tmp/ome/share/web/requirements-py27.txt
 
 script:
     - sudo python setup.py sdist install --record files.txt
