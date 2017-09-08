@@ -10,9 +10,13 @@ before_install:
   - flake8 .
   - rst-lint README.rst
   - export PATH=/usr/bin/:$PATH
+  - pip install omego
+  - (cd /tmp ; omego download python --release 5.4.0-m3 --sym=auto)
+  - git clone --depth 1 -b web_diagnostics https://github.com/joshmoore/openmicroscopy /tmp/ome
 
 script:
     - sudo python setup.py sdist install --record files.txt
     - cat files.txt | xargs sudo rm -rf
     - sudo python setup.py bdist_egg
     - easy_install dist/*.egg
+    - env PYTHONPATH=/tmp/ome/components/tools/OmeroPy/src/:/tmp/OMERO.py/lib/python /tmp/OMERO.py/bin/omero diagnostics
