@@ -50,6 +50,7 @@ class CollectingDiagnosticsControl(BaseControl):
             if isinstance(control, DiagnosticsControl):
                 control.diagnostics(args)
 
+
 try:
     register("diagnostics", CollectingDiagnosticsControl, HELP)
 except NameError:

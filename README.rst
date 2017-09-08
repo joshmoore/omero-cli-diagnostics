@@ -5,7 +5,7 @@
     :target: https://badge.fury.io/py/omero-cli-diagnostics
 
 omero-cli-diagnostics
-===================
+=====================
 
 Plugin for use in the OMERO CLI.
 
